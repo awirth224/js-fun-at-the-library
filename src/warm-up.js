@@ -60,7 +60,13 @@ if (pages < 1000) {
 // statement 'I recently read the [title] book'. In either case, the value stored in
 // the "title" variable should be included in the logged statement.
 
-
+function isFavorite() {
+    if(isFavorite === true){
+        console.log(`My favorite book is ${title}!`)
+    }else{
+        console.log(`I recently read the ${title} book`)
+    }
+}
 
 //------------------------- Arrays -------------------------//
 
@@ -68,24 +74,31 @@ if (pages < 1000) {
 // Create a new variable "books" and assign it to an Array of 5 different
 // book titles, represented by their names as Strings.
 
+books = ['The Tipping Point', 'Blink', 'Daring Greatly', 'Do No Harm', 'Admissions']
+
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
+console.log(books[2])
 
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
-
+var belowTwoHundred = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 // Write the code to access the 5th element of the array, using bracket notation.
-
+console.log(belowTwoHundred[4])
 
 //------------------------- Objects -------------------------//
 
 // Create a new variable "dictionary" and assign to it an object literal with two
 // keys: name, and hasThesaurus. The value for name should the string 'Webster's', and
 // the value for hasThesaurus should be false
-
+var dictionary = {
+    name: 'Webster\'s'
+    hasThesaurus: false
+}
 
 // Write the code to add the key of pageCount, with the value of 720. Use dot
 // notation to do this. DO NOT modify your code from above.
+dictionary.pageCount = 720

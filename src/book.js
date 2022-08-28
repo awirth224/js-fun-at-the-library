@@ -7,20 +7,39 @@ function buildMainCharacter(name, age, pronouns, reviews) {
     name: name, 
     age: age,
     pronouns: pronouns,
-    reviews: [reviews]
   }
 }
 
-function saveReview(reviews) {
-  reviews = reviews.push(reviews)
-  return reviews
+function saveReview(reviewText, reviews) {
+  if(!reviews.includes(reviewText)) {
+    reviews.push(reviewText)
+  }
 }
+
+function calculatePageCount(bookTitle) {
+  return bookTitle.length * 20
+  }
+
+function writeBook(bookTitle, bookCharacter, genre) {
+  return book = {
+  title: bookTitle,
+  mainCharacter: bookCharacter,
+  pageCount: bookTitle.length * 20,
+  genre: genre
+  }
+}
+
+function editBook(book) {
+book.pageCount = book.pageCount * .75
+return book.pageCount
+}
+
 
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
-  // calculatePageCount,
-  // writeBook,
-  // editBook
+  calculatePageCount,
+  writeBook,
+  editBook
 }
